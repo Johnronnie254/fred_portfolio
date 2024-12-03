@@ -2,14 +2,14 @@
 import React from 'react';
 import Home from './Home';  
 import AboutUs from './Aboutus';
-import contact from './Contact'
+import Contact from './Contact'
 
 function App() {
   return (
     <div className="App">
       <Home /> 
       <AboutUs /> 
-      <contact />
+      <Contact />
     </div>
   );
 }
