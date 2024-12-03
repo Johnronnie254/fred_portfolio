@@ -184,13 +184,6 @@ const Home = () => {
               }}
             >
               <h2 className="profile-title">Get to know me!</h2>
-              <p className="profile-description">
-                As a passionate photographer and videographer, I am dedicated to capturing and preserving the essence
-                of your most memorable moments. My work is not just about taking pictures or filming events—it's about
-                telling your unique story through my lens. With years of experience in both photography and film
-                editing, I focus on quality, creativity, and delivering results that exceed expectations. Let's create
-                lasting memories together!
-              </p>
             </div>
           </div>
         </div>

@@ -1,15 +1,16 @@
 import React from 'react';
-import IMG1 from './Profile.jpg'
+import IMG1 from './Profile.jpg';
 
 const AboutUs = () => {
   const aboutStyle = {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'black',
     color: 'white',
     minHeight: '100vh',
     padding: '50px',
+    gap: '20px', // Space between cards
   };
 
   const cardStyle = {
@@ -20,66 +21,40 @@ const AboutUs = () => {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    maxWidth: '400px',
-  };
-
-  const textContainerStyle = {
-    maxWidth: '50%',
-    paddingRight: '20px',
-    lineHeight: '1.6',
+    justifyContent: 'center',
+    width: '400px',
+    height: 'auto',
+    padding: '20px',
+    textAlign: 'center',
   };
 
   const imageStyle = {
     width: '100%',
     height: 'auto',
+    borderRadius: '10px',
+  };
+
+  const textStyle = {
+    lineHeight: '1.6',
+    fontSize: '16px',
   };
 
   return (
     <div style={aboutStyle}>
-      {/* About Me Text Section */}
-      <div style={textContainerStyle}>
+      {/* About Me Description Card */}
+      <div style={cardStyle}>
         <h1>About Me</h1>
-        <p>
-          Welcome to Waroyse Photography! With years of experience capturing life's most precious moments, I bring passion,
-          creativity, and technical expertise to every project I undertake. My services extend beyond traditional photography,
-          encompassing film editing, videography, and bespoke services tailored to your unique needs.
-        </p>
-        <h3>Photography</h3>
-        <p>
-          Whether it’s weddings, portraits, or nature shots, I specialize in creating timeless photographs that tell a story.
-          My approach is to capture the authentic emotions and beauty in every frame, delivering images that resonate deeply
-          with my clients.
-        </p>
-        <h3>Film Editing</h3>
-        <p>
-          As a skilled film editor, I bring raw footage to life. I meticulously edit films to craft compelling narratives that
-          align with the vision of my clients. From short films to corporate videos, I ensure the final product is polished and
-          impactful.
-        </p>
-        <h3>Videography</h3>
-        <p>
-          With a keen eye for detail, I capture cinematic moments that immerse viewers in the story. My videography services
-          include event coverage, promotional videos, and creative projects designed to leave a lasting impression.
-        </p>
-        <h3>Services Offered</h3>
-        <ul>
-          <li>Event Photography</li>
-          <li>Wedding Videography</li>
-          <li>Film Editing for Short Films</li>
-          <li>Documentaries</li>
-          <li>Corporate Branding Videos</li>
-          <li>Creative Portraits</li>
-        </ul>
-        <p>
-          At Waroyse Photography, my mission is to provide exceptional visual storytelling that captures the essence of every
-          moment. Let’s work together to create memories that will last a lifetime.
+        <p style={textStyle}>
+          Welcome to Waroyse Photography! With years of experience capturing life’s most precious moments, I bring a unique
+          blend of passion, creativity, and technical expertise to photography, videography, and film editing. Let’s work
+          together to create timeless memories that you’ll cherish forever.
         </p>
       </div>
 
-      {/* Image Card Section */}
+      {/* Image Card */}
       <div style={cardStyle}>
         <img
-          src={IMG1} 
+          src={IMG1}
           alt="Waroyse Photography"
           style={imageStyle}
         />
