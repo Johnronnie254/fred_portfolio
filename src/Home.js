@@ -183,7 +183,7 @@ const Home = () => {
                 color: 'white',
               }}
             >
-              <h2 className="profile-title">Get to know me!</h2>
+             
             </div>
           </div>
         </div>
