@@ -4,13 +4,14 @@ import IMG1 from './Profile.jpg';
 const AboutUs = () => {
   const aboutStyle = {
     display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    justifyContent: 'center', // Center cards horizontally
+    alignItems: 'center', // Center cards vertically
     backgroundColor: 'black',
     color: 'white',
-    minHeight: '100vh',
-    padding: '50px',
-    flexWrap: 'wrap', // Allows wrapping for smaller screens
+    minHeight: '50vh', // Set height to half the screen size
+    padding: '20px',
+    gap: '20px', // Add spacing between cards
+    flexWrap: 'wrap', // Allow wrapping for smaller screens
   };
 
   const cardStyle = {
@@ -21,27 +22,28 @@ const AboutUs = () => {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    width: '100%',
-    maxWidth: '400px',
+    width: '300px', // Set a fixed width for uniformity
     margin: '10px',
-  };
-
-  const textCardStyle = {
-    ...cardStyle,
-    textAlign: 'left',
-    padding: '20px',
+    textAlign: 'center', // Center text content
   };
 
   const imageStyle = {
     width: '100%',
     height: 'auto',
+    borderRadius: '10px 10px 0 0', // Rounded corners for the top of the image
+  };
+
+  const textCardStyle = {
+    ...cardStyle,
+    padding: '20px',
   };
 
   const mediaQueryStyle = `
     @media (max-width: 768px) {
       .about-container {
-        flexDirection: column; /* Stack the cards on mobile */
+        flexDirection: column; /* Stack the cards on smaller screens */
         alignItems: center;
+        minHeight: auto; /* Adjust height for smaller screens */
       }
     }
   `;

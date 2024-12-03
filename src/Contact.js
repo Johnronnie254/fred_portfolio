@@ -9,7 +9,7 @@ const Contact = () => {
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    minHeight: '100vh',
+    minHeight: '50vh', // Set to half the screen height
     backgroundColor: 'black',
     color: 'white',
     padding: '20px',
