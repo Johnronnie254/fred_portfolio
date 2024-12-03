@@ -29,13 +29,18 @@ const AboutUs = () => {
 
   const imageStyle = {
     width: '100%',
-    height: 'auto',
+    height: '100%', // Ensure the image fills the height of the card
+    objectFit: 'cover', // Maintain the aspect ratio of the image
     borderRadius: '10px 10px 0 0', // Rounded corners for the top of the image
   };
 
   const textCardStyle = {
     ...cardStyle,
     padding: '20px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center', // Vertically center the text in the card
+    height: '300px', // Set fixed height for both text and image cards
   };
 
   const mediaQueryStyle = `
