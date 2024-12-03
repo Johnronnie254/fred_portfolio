@@ -4,13 +4,13 @@ import IMG1 from './Profile.jpg';
 const AboutUs = () => {
   const aboutStyle = {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: 'black',
     color: 'white',
     minHeight: '100vh',
     padding: '50px',
-    gap: '20px', // Space between cards
+    flexWrap: 'wrap', // Allows wrapping for smaller screens
   };
 
   const cardStyle = {
@@ -21,33 +21,41 @@ const AboutUs = () => {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
-    width: '400px',
-    height: 'auto',
+    width: '100%',
+    maxWidth: '400px',
+    margin: '10px',
+  };
+
+  const textCardStyle = {
+    ...cardStyle,
+    textAlign: 'left',
     padding: '20px',
-    textAlign: 'center',
   };
 
   const imageStyle = {
     width: '100%',
     height: 'auto',
-    borderRadius: '10px',
   };
 
-  const textStyle = {
-    lineHeight: '1.6',
-    fontSize: '16px',
-  };
+  const mediaQueryStyle = `
+    @media (max-width: 768px) {
+      .about-container {
+        flexDirection: column; /* Stack the cards on mobile */
+        alignItems: center;
+      }
+    }
+  `;
 
   return (
-    <div style={aboutStyle}>
-      {/* About Me Description Card */}
-      <div style={cardStyle}>
+    <div style={aboutStyle} className="about-container">
+      <style>{mediaQueryStyle}</style>
+      {/* Description Card */}
+      <div style={textCardStyle}>
         <h1>About Me</h1>
-        <p style={textStyle}>
-          Welcome to Waroyse Photography! With years of experience capturing life’s most precious moments, I bring a unique
-          blend of passion, creativity, and technical expertise to photography, videography, and film editing. Let’s work
-          together to create timeless memories that you’ll cherish forever.
+        <p>
+          Welcome to Waroyse Photography! With years of experience capturing life's most precious moments, I bring passion,
+          creativity, and technical expertise to every project I undertake. My services extend beyond traditional photography,
+          encompassing film editing, videography, and bespoke services tailored to your unique needs.
         </p>
       </div>
 

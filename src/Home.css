@@ -3,103 +3,70 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #000; /* Dark background */
-  color: white; /* Default text color set to white */
-}
-
-/* Welcome Screen Styling */
-.welcome-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #000; /* Black background for welcome screen */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.moving-text {
-  animation: slideIn 5s ease forwards;
-}
-
-.moving-text h1,
-.moving-text h3 {
-  margin: 0;
+  background-color: #000;
   color: white;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
+.home-container {
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-/* Main Content after Welcome Screen */
+.welcome-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.moving-text h1, .moving-text h3 {
+  color: white;
+}
+
 .main-content {
   position: relative;
-  min-height: 100vh; /* Ensure the page height covers the viewport */
+  min-height: 100vh;
 }
 
-/* Navigation Links - Horizontal Layout */
+/* Navigation Links */
 .nav-links {
-  position: absolute;
-  top: 80px; /* Adjust this to float just above the services section */
-  right: 20px; /* Align to the right side of the page */
+  position: fixed;
+  top: 10px;
+  right: 20px;
   display: flex;
-  gap: 30px; /* Horizontal spacing between links */
+  gap: 20px;
   z-index: 10;
 }
 
 .nav-link {
-  color: white; /* Make all links white */
+  color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.nav-link:hover {
-  color: #ccc; /* Slightly lighter on hover */
-  text-decoration: underline;
-}
-
-/* Work Dropdown */
-.work-link:hover + .work-dropdown,
-.work-dropdown:hover {
-  display: block; /* Show dropdown when hovering over Work or dropdown */
+.dropdown-container {
+  position: relative;
 }
 
 .work-dropdown {
-  display: none; /* Initially hidden */
+  display: none;
   position: absolute;
-  top: 40px; /* Position below the "Work" link */
-  background-color: rgba(0, 0, 0, 0.9); /* Slightly transparent black */
+  top: 30px;
+  background: rgba(0, 0, 0, 0.9);
   padding: 10px;
-  border-radius: 4px;
-  z-index: 20;
+  border-radius: 5px;
 }
 
-.dropdown-item {
-  color: white; /* Make dropdown items white */
-  text-decoration: none;
-  margin: 5px 0;
+.work-link:hover + .work-dropdown,
+.work-dropdown:hover {
   display: block;
 }
 
-.dropdown-item:hover {
-  color: #f1f1f1; /* Slightly lighter color on hover */
-  text-decoration: underline;
-}
-
-/* Carousel Styling */
+/* Carousel */
 .carousel-container {
-  margin-top: 20px;
-  z-index: 1; /* Ensure the carousel appears below the static content */
+  margin-top: 50px;
 }
 
 .carousel-image {
@@ -107,74 +74,36 @@ body {
   object-fit: cover;
 }
 
-/* Content Overlay */
+/* Overlay Content */
 .content-overlay {
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 10; /* Ensure the text is above the carousel */
 }
 
-/* Services Section */
-.services {
-  position: fixed; /* Make the services section fixed on the screen */
-  top: 50%; /* Place in the middle of the screen */
-  right: 30px; /* Place it on the right margin */
-  transform: translateY(-50%); /* Center it vertically */
-  text-align: center;
-  z-index: 20; /* Ensure it's above carousel */
-}
-
-.service-title {
-  font-size: 36px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white; /* Ensure the service title is white */
-}
-
-/* "Get to Know Me" Section */
-.profile {
-  margin-top: 300px; /* Ensure it is 300px below the services */
-  text-align: center;
+/.services {
+  margin-top: 20px;
 }
 
 .profile-title {
-  font-size: 32px;
-  color: white;
+  font-size: 24px;
 }
 
-.profile-description {
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-  color: #f1f1f1;
-}
-
-/* Media Queries for responsiveness */
 @media (max-width: 768px) {
   .nav-links {
-    flex-direction: row; /* Align the links horizontally on mobile */
-    justify-content: flex-start; /* Align to the left */
-  }
-
-  .nav-link {
-    font-size: 16px;
-    margin-right: 10px;
-  }
-
-  .services {
-    font-size: 24px;
-    right: 10px; /* Move the services section to the right */
+    top: 20px;
+    right: 10px;
+    flex-direction: column;
   }
 
   .carousel-image {
     height: 70vh;
   }
 
-  .profile-description {
-    font-size: 16px;
+  .content-overlay {
+    top: 60%;
+    transform: translate(-50%, -40%);
   }
 }
