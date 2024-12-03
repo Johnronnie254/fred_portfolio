@@ -23,13 +23,14 @@ const AboutUs = () => {
     flexDirection: 'column',
     alignItems: 'center',
     width: '300px', // Set a fixed width for uniformity
+    height: '400px', // Set a fixed height for both cards to match
     margin: '10px',
     textAlign: 'center', // Center text content
   };
 
   const imageStyle = {
     width: '100%',
-    height: '100%', // Ensure the image fills the height of the card
+    height: '60%', // Ensure the image fills a portion of the card, leaving space for text
     objectFit: 'cover', // Maintain the aspect ratio of the image
     borderRadius: '10px 10px 0 0', // Rounded corners for the top of the image
   };
@@ -40,7 +41,6 @@ const AboutUs = () => {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center', // Vertically center the text in the card
-    height: '300px', // Set fixed height for both text and image cards
   };
 
   const mediaQueryStyle = `
