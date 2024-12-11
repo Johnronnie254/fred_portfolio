@@ -1,201 +1,121 @@
 /* General Styling */
 body {
   margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #000; /* Dark background */
-  color: white; /* Default text color set to white */
-}
-
-/* Welcome Screen Styling */
-.welcome-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #000; /* Black background for welcome screen */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.moving-text {
-  animation: slideIn 5s ease forwards;
-}
-
-.moving-text h1,
-.moving-text h3 {
-  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #000;
   color: white;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateY(-100%);
+/* Welcome Screen */
+.welcome-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.welcome-text h1,
+.welcome-text h3 {
+  text-transform: uppercase;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  to {
+  100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Main Content after Welcome Screen */
-.main-content {
-  position: relative;
-  min-height: 100vh; /* Ensure the page height covers the viewport */
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0; /* Align navbar to the extreme right */
+  margin-top: 50px; /* Add top margin */
+  z-index: 1000;
 }
 
-/* Navigation Links - Horizontal Layout */
-.nav-links {
-  position: absolute;
-  top: 80px; /* Adjust this to float just above the services section */
-  right: 20px; /* Align to the right side of the page */
+.nav-menu {
   display: flex;
-  gap: 30px; /* Horizontal spacing between links */
-  z-index: 10;
+  flex-direction: row;
+  gap: 20px; /* Spacing between links */
+  margin-right: 20px; /* Push links away from the edge */
 }
 
-.nav-link {
-  color: white; /* Make all links white */
+.nav-menu .nav-link {
   text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  transition: color 0.3s ease; /* Smooth color transition */
+  color: white;
+  font-size: 1.2rem;
+
+  transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #ccc; /* Slightly lighter on hover */
-  text-decoration: underline;
+.nav-menu .nav-link:hover {
+  color: #00aaff; /* Light blue hover color */
 }
 
-/* Work Dropdown */
-.work-link:hover + .work-dropdown,
-.work-dropdown:hover {
-  display: block; /* Show dropdown when hovering over Work or dropdown */
+/* For Mobile Menu */
+.menu-icon {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 20px;
 }
 
-.work-dropdown {
-  display: none; /* Initially hidden */
-  position: absolute;
-  top: 40px; /* Position below the "Work" link */
-  background-color: rgba(0, 0, 0, 0.9); /* Slightly transparent black */
-  padding: 10px;
-  border-radius: 4px;
-  z-index: 20;
+.nav-menu.visible {
+  display: flex; /* Show menu in mobile mode */
 }
 
-.dropdown-item {
-  color: white; /* Make dropdown items white */
-  text-decoration: none;
-  margin: 5px 0;
-  display: block;
+.nav-menu:not(.visible) {
+  display: none; /* Hide menu in mobile mode */
 }
 
-.dropdown-item:hover {
-  color: #f1f1f1; /* Slightly lighter color on hover */
-  text-decoration: underline;
-}
-
-/* Carousel Styling */
-.carousel-container {
-  margin-top: 20px;
-  z-index: 1; /* Ensure the carousel appears below the static content */
-}
-
+/* Carousel */
 .carousel-image {
   height: 100vh;
   object-fit: cover;
 }
 
-/* Content Overlay */
-.content-overlay {
+/* Centered Text */
+.centered-text {
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 10; /* Ensure the text is above the carousel */
 }
 
-/* Services Section */
-.services {
-  position: fixed; /* Make the services section fixed on the screen */
-  top: 50%; /* Place in the middle of the screen */
-  right: 30px; /* Place it on the right margin */
-  transform: translateY(-50%); /* Center it vertically */
-  text-align: center;
-  z-index: 20; /* Ensure it's above carousel */
-}
-
-.service-title {
-  font-size: 36px;
+.centered-text h1 {
+  font-size: 3rem;
   font-weight: bold;
-  text-transform: uppercase;
-  color: white; /* Ensure the service title is white */
+ 
+  /* Remove the animation */
+
 }
 
-/* "Get to Know Me" Section */
-.profile {
-  margin-top: 300px; /* Ensure it is 300px below the services */
+/* Sections */
+.section {
+  padding: 100px 20px;
   text-align: center;
+  background-color: #121212;
 }
 
-.profile-title {
-  font-size: 32px;
-  color: white;
+.section:nth-child(even) {
+  background-color: #1f1f1f;
 }
 
-.profile-description {
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-  color: #f1f1f1;
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column; /* Align the links vertically on mobile */
-    gap: 15px; /* Adjust spacing */
-  }
-
-  .nav-link {
-    font-size: 16px;
-    margin-right: 0;
-  }
-
-  .services {
-    font-size: 24px;
-    top: auto;
-    bottom: 10%;
-    right: 10px; /* Move the services section to the right */
-    transform: none; /* Align normally */
-  }
-
-  .carousel-image {
-    height: 70vh; /* Reduce height for mobile */
-  }
-
-  .service-title {
-    font-size: 20px; /* Adjust font size */
-  }
-
-  .profile-title {
-    font-size: 24px; /* Reduce size for mobile */
-  }
-
-  .profile-description {
-    font-size: 16px;
-  }
-
-  .content-overlay {
-    top: 10%;
-    padding: 10px; /* Adjust padding */
-  }
-
-  .moving-text h1,
-  .moving-text h3 {
-    font-size: 1.5rem; /* Adjust for smaller screens */
-  }
+.section p {
+  font-size: 1.2rem;
+  color: #ccc;
 }
