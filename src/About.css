@@ -1,0 +1,88 @@
+/* About Us Container */
+.about-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: darkgrey;
+  color: black;
+  min-height: 50vh; /* Reduced height to half screen size */
+  padding: 40px;
+  gap: 40px; /* Space between text and image */
+  flex-direction: row; /* Default: side-by-side layout */
+  text-align: left; /* Align text to the left */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Animated Title */
+.text-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333; /* Dark color for contrast */
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Styling */
+.card, .text-card {
+  background-color: white; /* Set background color to white for text card */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 50%; /* Set both cards to take equal width */
+  max-width: 500px;
+}
+
+/* Image Styling */
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Text Card Styling */
+.text-card p {
+  color: #555; /* Darker color for text to maintain readability */
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Stack the cards vertically */
+    gap: 20px;
+    text-align: center;
+  }
+
+  .card, .text-card {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .text-card h1 {
+    font-size: 2rem; /* Slightly smaller title on mobile */
+  }
+
+  .text-card p {
+    font-size: 1rem;
+  }
+}
+/* Page Title */
+.page-title {
+  text-align: center; /* Center align the title */
+  font-size: 3rem; /* Make the font large */
+  color: black; /* Set the color to black */
+  margin-bottom: 40px; /* Space between the title and the about section */
+  font-family: 'Arial', sans-serif;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { EnvelopeFill, TelephoneFill, GeoAltFill } from 'react-bootstrap-icons';
-import { FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+import { FaVimeo, FaImdb } from 'react-icons/fa'; // Import Vimeo and IMDb icons
 
 const Contact = () => {
   const containerStyle = {
@@ -38,27 +39,32 @@ const Contact = () => {
   return (
     <div style={containerStyle}>
       <h1>Contact</h1>
+      
+      {/* Clickable Email */}
       <div style={iconTextStyle}>
         <EnvelopeFill size={20} />
-        <span>Email: fredwarui@gmail.com</span>
+        <a href="mailto:fredwarui@gmail.com" style={linkStyle}>
+          <span>Email: fredwarui@gmail.com</span>
+        </a>
       </div>
+
+      {/* Clickable Phone */}
       <div style={iconTextStyle}>
         <TelephoneFill size={20} />
-        <span>Phone: +254720062393</span>
+        <a href="tel:+254720062393" style={linkStyle}>
+          <span>Phone: +254720062393</span>
+        </a>
       </div>
+
+      {/* Location */}
       <div style={iconTextStyle}>
         <GeoAltFill size={20} />
         <span>Location: Nairobi, Kenya</span>
       </div>
+
+      {/* Social Media Icons */}
       <div style={socialIconsStyle}>
-        <a
-          href="https://twitter.com/yourtwitterhandle"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={linkStyle}
-        >
-          <FaTwitter />
-        </a>
+        
         <a
           href="https://www.instagram.com/warui_fred/"
           target="_blank"
@@ -66,6 +72,24 @@ const Contact = () => {
           style={linkStyle}
         >
           <FaInstagram />
+        </a>
+
+        {/* Vimeo and IMDb Icons */}
+        <a
+          href="https://vimeo.com/yourvimeolink"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={linkStyle}
+        >
+          <FaVimeo />
+        </a>
+        <a
+          href="https://www.imdb.com/name/yourimdbid"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={linkStyle}
+        >
+          <FaImdb />
         </a>
       </div>
     </div>
