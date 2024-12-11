@@ -1,88 +1,94 @@
-/* About Us Container */
+/* General About Container */
 .about-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  background-color: darkgrey;
-  color: black;
-  min-height: 50vh; /* Reduced height to half screen size */
-  padding: 40px;
-  gap: 40px; /* Space between text and image */
-  flex-direction: row; /* Default: side-by-side layout */
-  text-align: left; /* Align text to the left */
+  flex-direction: column; /* Stack vertically on small screens */
+  gap: 15px; /* Reduced gap between cards */
+  padding: 20px; /* Add consistent padding */
+  background-color: #f5f5f5; /* Light gray background for better contrast */
+  text-align: left; /* Align text to the far left */
+}
+
+/* Text Card Adjustments */
+.text-card {
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
   font-family: 'Arial', sans-serif;
+  line-height: 1.5;
 }
 
-/* Animated Title */
 .text-card h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333; /* Dark color for contrast */
-  animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+  font-size: 1.8rem; /* Slightly smaller for small screens */
+  margin-bottom: 10px;
+  color: #333;
+  text-align: left; /* Left align title */
 }
 
-/* Keyframes for Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.text-card p {
+  margin: 0; /* Remove space between paragraphs */
+  font-size: 1rem;
+  color: #555;
+  text-align: left; /* Align text to the left */
 }
 
-/* Card Styling */
-.card, .text-card {
-  background-color: white; /* Set background color to white for text card */
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  width: 50%; /* Set both cards to take equal width */
-  max-width: 500px;
+/* Image Card Adjustments */
+.card {
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 1 / 1; /* Makes the card square */
+  overflow: hidden; /* Ensures image does not overflow */
 }
 
-/* Image Styling */
 .card img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover; /* Ensures image fits the square card */
   border-radius: 10px;
 }
 
-/* Text Card Styling */
-.text-card p {
-  color: #555; /* Darker color for text to maintain readability */
-  line-height: 1.6;
-  font-size: 1rem;
+/* Page Title Adjustments */
+.page-title {
+  font-size: 2rem; /* Slightly smaller font size */
+  text-align: center; /* Align title to the left */
+  color: #333;
+  margin: 10px 0 20px 0; /* Reduced spacing for small screens */
+  padding: 0 20px; /* Add padding for clean spacing */
 }
 
-/* Mobile Responsiveness */
+/* Responsive Media Query for Small Screens */
 @media (max-width: 768px) {
   .about-container {
-    flex-direction: column; /* Stack the cards vertically */
-    gap: 20px;
-    text-align: center;
+    padding: 10px; /* Smaller padding for small screens */
+    gap: 10px; /* Smaller gap */
   }
 
-  .card, .text-card {
-    width: 100%; /* Full width on smaller screens */
+  .text-card, .card {
+    width: 100%; /* Full width for both cards */
+    margin: 0; /* No extra margin */
+    padding: 10px;
   }
 
   .text-card h1 {
-    font-size: 2rem; /* Slightly smaller title on mobile */
+    font-size: 1.5rem; /* Smaller heading font size */
   }
 
   .text-card p {
-    font-size: 1rem;
+    font-size: 0.95rem; /* Adjust paragraph font size */
+    line-height: 1.4; /* Slightly reduce line spacing */
   }
-}
-/* Page Title */
-.page-title {
-  text-align: center; /* Center align the title */
-  font-size: 3rem; /* Make the font large */
-  color: black; /* Set the color to black */
-  margin-bottom: 40px; /* Space between the title and the about section */
-  font-family: 'Arial', sans-serif;
+
+  .card {
+    aspect-ratio: 1 / 1; /* Ensure card stays square */
+  }
+
+  .page-title {
+    font-size: 1.8rem; /* Adjust title font size */
+    padding-left: 10px; /* Left align padding */
+  }
 }

@@ -4,9 +4,9 @@ import Work from './Work';
 import Contact from './Contact';
 import AboutUs from './Aboutus';
 
-
 const Home = () => {
   const [showContent, setShowContent] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // State for menu toggle
 
   useEffect(() => {
     const timer = setTimeout(() => setShowContent(true), 3000);
@@ -18,6 +18,7 @@ const Home = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
+    setMenuOpen(false); // Close menu on link click
   };
 
   return (
@@ -35,8 +36,11 @@ const Home = () => {
           {/* Navigation Bar */}
           <nav className="navbar">
             <div className="logo">Fred Warui</div>
-            <div className="nav-links">
-              
+            {/* Hamburger Menu */}
+            <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+              ☰
+            </div>
+            <div className={`nav-links ${menuOpen ? "nav-links-active" : ""}`}>
               <a href="#about" onClick={() => scrollToSection("about")}>About</a>
               <a href="#work" onClick={() => scrollToSection("work")}>Work</a>
               <a href="#contact" onClick={() => scrollToSection("contact")}>Contact</a>
