@@ -37,7 +37,7 @@ const Contact = () => {
 
   return (
     <div style={containerStyle}>
-      <h1>Contact Us</h1>
+      <h1>Contact</h1>
       <div style={iconTextStyle}>
         <EnvelopeFill size={20} />
         <span>Email: fredwarui@gmail.com</span>
@@ -60,7 +60,7 @@ const Contact = () => {
           <FaTwitter />
         </a>
         <a
-          href="https://instagram.com/yourinstagramhandle"
+          href="https://www.instagram.com/warui_fred/"
           target="_blank"
           rel="noopener noreferrer"
           style={linkStyle}

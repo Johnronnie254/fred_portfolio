@@ -60,9 +60,15 @@ const AboutUs = () => {
       <div style={textCardStyle}>
         <h1>About Me</h1>
         <p>
-          Welcome to Waroyse Photography! With years of experience capturing life's most precious moments, I bring passion,
-          creativity, and technical expertise to every project I undertake. My services extend beyond traditional photography,
-          encompassing film editing, videography, and bespoke services tailored to your unique needs.
+         About Fredrick Warui
+
+Fredrick Warui is a passionate filmmaker, experienced in the art of cinematography, directing, and focus pulling. With a deep love for storytelling, Fredrick's journey in the film industry has seen him excel as a 1st Assistant Camera (1st AC), ensuring precision and focus on countless sets. He has had the privilege of working alongside directors and Directors of Photography (DPs) from around the world, gaining invaluable experience and a global perspective on filmmaking.  
+
+As a skilled Director of Photography (DP), Fredrick continues to hone his craft in color grading and lighting, aiming to bring stories to life with visual excellence. Beyond the technical lens, he thrives as a director, having worked on impactful commercials, short films, and creative projects that resonate with audiences.  
+
+Driven by a vision to inspire through film, Fredrick combines artistry and precision to create memorable visual narratives. Whether it's behind the camera or guiding a story as a director, his focus remains on excellence, innovation, and delivering stories that matter.  
+
+Feel free to reach out.
         </p>
       </div>
 
