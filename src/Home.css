@@ -61,6 +61,37 @@ body {
   color: #f39c12;
 }
 
+/* Hamburger Menu for Small Screens */
+.navbar .menu-toggle {
+  display: none;
+}
+
+.navbar.active .menu-toggle {
+  display: block;
+}
+
+.navbar.active .nav-links {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar .menu-toggle {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar.active .nav-links {
+  display: block;
+}
+
 /* Home Section */
 .home-section {
   height: 100vh;
@@ -76,6 +107,11 @@ body {
   margin: 10px 0;
   text-transform: uppercase;
   animation: float 3s infinite alternate;
+}
+
+.centered-text h3 {
+  font-size: 2rem;
+  margin: 10px 0;
 }
 
 @keyframes float {
@@ -102,4 +138,49 @@ body {
 .section p {
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Home section text */
+  .centered-text h1 {
+    font-size: 2.2rem; /* Smaller text size */
+  }
+
+  .centered-text h3 {
+    font-size: 1.5rem; /* Smaller text size */
+  }
+
+  /* Navbar adjustments */
+  .navbar {
+    padding: 20px 30px; /* Reduced padding for smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links by default on mobile */
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: block; /* Show hamburger menu */
+  }
+
+  .navbar.active .nav-links {
+    display: block;
+  }
+}
+
+/* For tablets and larger mobile screens */
+@media (max-width: 1200px) {
+  .centered-text h1 {
+    font-size: 2.5rem; /* Reduced size for medium screens */
+  }
+  .centered-text h3 {
+    font-size: 1.8rem; /* Reduced size for medium screens */
+  }
 }
