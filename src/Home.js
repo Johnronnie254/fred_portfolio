@@ -1,6 +1,6 @@
 // Home.js
 import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar"; // Import the Navbar component
+
 import "./Home.css"; // Import CSS for Home
 
 const Home = () => {
@@ -23,8 +23,7 @@ const Home = () => {
         </div>
       ) : (
         <>
-          {/* Navbar Component */}
-          <Navbar />
+          
           
           {/* Home Section with Background Image */}
           <section id="home" className="home-section">
@@ -35,9 +34,6 @@ const Home = () => {
               <h1>Focus Pooling</h1>
             </div>
           </section>
-
-          {/* Spacer to Push Other Sections Down */}
-          <div className="spacer"></div>
         </>
       )}
     </div>

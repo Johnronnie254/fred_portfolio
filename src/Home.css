@@ -34,10 +34,10 @@ body {
 
 /* Home Section with Cinematography Background */
 .home-section {
-  height: 100vh;
-  background-image: url('your-image-url-here.jpg'); /* Set your cinematography background image */
-  background-size: cover;
-  background-position: center;
+  height: 100vh; /* Full height of the viewport */
+  background-image: url('https://i.pinimg.com/736x/a7/42/3d/a7423d8003c86ebe44c57e79b6d90b62.jpg'); /* Replace with your cinematography background image URL */
+  background-size: cover; /* Ensure image covers the entire section */
+  background-position: center; /* Center the background image */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,9 +61,4 @@ body {
   .centered-text h1 {
     font-size: 1.4rem;
   }
-}
-
-/* Spacer to Push Sections Down */
-.spacer {
-  height: 100vh;
 }
