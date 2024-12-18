@@ -50,6 +50,7 @@ body {
   margin: 10px 0;
   text-transform: uppercase;
   animation: float 3s infinite alternate;
+  color: white! important;
 }
 
 @keyframes float {

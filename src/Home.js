@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from "react";
 
 import "./Home.css"; // Import CSS for Home
+import AboutUs from './Aboutus'
+import Work from './Work'
+import Contact from './Contact'
 
 const Home = () => {
   const [showContent, setShowContent] = useState(false);
@@ -36,6 +39,10 @@ const Home = () => {
           </section>
         </>
       )}
+
+      <Aboutus />
+      <Work />
+      <Contact />
     </div>
   );
 };

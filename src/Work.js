@@ -170,9 +170,7 @@ const Work = () => {
             <div className="card-content">
               <h3>{card.title}</h3>
               <p>{card.description}</p>
-              <button onClick={() => toggleExpand(card.id)}>
-                {expanded[card.id] ? "Show Less" : "Show More"}
-              </button>
+              
             </div>
           </div>
         ))}
