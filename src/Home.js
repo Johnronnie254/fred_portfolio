@@ -40,7 +40,7 @@ const Home = () => {
         </>
       )}
 
-      <Aboutus />
+      <AboutUs />
       <Work />
       <Contact />
     </div>

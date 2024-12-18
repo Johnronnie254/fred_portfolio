@@ -144,12 +144,11 @@ const videoCards = [
 
 const Work = () => {
   const [visibleCount, setVisibleCount] = useState(9);
-  const [expanded, setExpanded] = useState({});
-
+ 
   const loadMore = () => setVisibleCount((prev) => Math.min(prev + 9, videoCards.length));
   const loadLess = () => setVisibleCount(9);
 
-  const toggleExpand = (id) => setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
+ 
 
   return (
     <div className="work-container">
