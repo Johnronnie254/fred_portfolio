@@ -1,25 +1,15 @@
+// Home.js
 import React, { useState, useEffect } from "react";
-import "./Home.css";
-import Work from './Work';
-import Contact from './Contact';
-import AboutUs from './Aboutus';
+import Navbar from "./Navbar"; // Import the Navbar component
+import "./Home.css"; // Import CSS for Home
 
 const Home = () => {
   const [showContent, setShowContent] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // State for menu toggle
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowContent(true), 3000);
+    const timer = setTimeout(() => setShowContent(true), 3000); // Delay before content shows
     return () => clearTimeout(timer);
   }, []);
-
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-    setMenuOpen(false); // Close menu on link click
-  };
 
   return (
     <div className="home-container">
@@ -33,21 +23,10 @@ const Home = () => {
         </div>
       ) : (
         <>
-          {/* Navigation Bar */}
-          <nav className="navbar">
-            <div className="logo">Fred Warui</div>
-            {/* Hamburger Menu */}
-            <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-              ☰
-            </div>
-            <div className={`nav-links ${menuOpen ? "nav-links-active" : ""}`}>
-              <a href="#about" onClick={() => scrollToSection("about")}>About</a>
-              <a href="#work" onClick={() => scrollToSection("work")}>Work</a>
-              <a href="#contact" onClick={() => scrollToSection("contact")}>Contact</a>
-            </div>
-          </nav>
-
-          {/* Centered Home Content */}
+          {/* Navbar Component */}
+          <Navbar />
+          
+          {/* Home Section with Background Image */}
           <section id="home" className="home-section">
             <div className="centered-text">
               <h1>Cinematography</h1>
@@ -59,21 +38,6 @@ const Home = () => {
 
           {/* Spacer to Push Other Sections Down */}
           <div className="spacer"></div>
-
-          {/* About Section */}
-          <section id="about" className="section">
-            <AboutUs />
-          </section>
-
-          {/* Work Section */}
-          <section id="work" className="section">
-            <Work />
-          </section>
-
-          {/* Contact Section */}
-          <section id="contact" className="section">
-            <Contact />
-          </section>
         </>
       )}
     </div>

@@ -4,7 +4,7 @@ import "./Work.css";
 const videoCards = [
   {
     id: 1,
-    title: "Philips_All_271022_TX",
+    title: "Philips",
     videoSrc: "https://player.vimeo.com/video/890563322",
     description: `Agency - Game changer\nClient - Philips\nProducer - Shiro\nDirector and DP - Warui Fred\nAD - Fuad Mbigi\nCamera Assistant - Nashreen`,
   },
@@ -16,13 +16,13 @@ const videoCards = [
   },
   {
     id: 3,
-    title: "Making Positive Impact through Technology",
+    title: "Positive Impact",
     videoSrc: "https://player.vimeo.com/video/844288440",
     description: `Production house: MOJO\nDirector: Mohammed Zain\nDP: Moha and Warui Fred`,
   },
   {
     id: 4,
-    title: "KCB GO AHEAD SPIRIT",
+    title: "KCB",
     videoSrc: "https://player.vimeo.com/video/504247177",
     description: `Client: KCB\nDirector: Enos Olik\nCinematography: Warui Fred`,
   },
@@ -40,13 +40,13 @@ const videoCards = [
   },
   {
     id: 7,
-    title: "FX PESA - ARE YOU ONE OF US",
+    title: "FX PESA",
     videoSrc: "https://player.vimeo.com/video/370802795",
     description: `Agency: Brand Immersion\nCopywriters: Mike Kiruthi/Ken Kenya\nDirector/DP: Enos Olik\nFocus Puller/DIT: Fred Warui`,
   },
   {
     id: 8,
-    title: "Kibao Vodka - Kakwonje",
+    title: "Kibao Vodka",
     videoSrc: "https://player.vimeo.com/video/844293052",
     description: `Production House - MOJO\nCinematographer: Moha & Warui Fred\n1AC/FP - Tony`,
   },
@@ -64,7 +64,7 @@ const videoCards = [
   },
   {
     id: 11,
-    title: "SIAYA-(Directors cut) Konkodi Feat Boneye x Brain Nadra x Kuhani",
+    title: "SIAYA",
     videoSrc: "https://player.vimeo.com/video/383046752",
     description: `Director, cinematography DOP, Editor: Warui Fred\nColorist: Enos Olik\nAC: Ben Kilu and Rango.m\nGaffer: Isaac Awene`,
   },
@@ -82,13 +82,13 @@ const videoCards = [
   },
   {
     id: 14,
-    title: "I'm Here For It Training Day Netflix Sports",
+    title: "Netflix",
     videoSrc: "https://player.vimeo.com/video/924906697",
     description: `Production House - Igabantu Studios\nProducer - Faith Kaluva\nDirector - Enos Olik\n2nd Cinematography - Warui Fred\nAC - Sinde Lumumba`,
   },
   {
     id: 15,
-    title: "We are Eskimi TVC",
+    title: "Eskimi TVC",
     videoSrc: "https://player.vimeo.com/video/563721611",
     description: `Kenyan Team\nCinematography - Enos Olik\nProducer - Fuad Mbigi\nGaffer - Isaac Awene\n1st AC - Fred Warui`,
   },
@@ -100,7 +100,7 @@ const videoCards = [
   },
   {
     id: 17,
-    title: "AZIMIO_GOTV_Digital_V02_TX",
+    title: "AZIMIO GOTV",
     videoSrc: "https://player.vimeo.com/video/735913283",
     description: `DIRECTOR / DOP: Warui Fred`,
   },
@@ -112,25 +112,25 @@ const videoCards = [
   },
   {
     id: 19,
-    title: "NEW LOOK SASINI TVC",
+    title: "SASINI TVC",
     videoSrc: "https://player.vimeo.com/video/566433798",
     description: `Client : Sasini\nAgency : Potency Digital\nDirector / DP : Enos Olik\nPM : Joseph Mwangi\nProducer : Shiru Kahugu\n1st AD : Fuad Mbigi\n1st AC : Fred Warui\n1st AC : Ben Kiilu\nGaffer : Isaac Awene\nMUA : Mis Bella Wairimu\nEditor : Rango M\nSound : Nesta Negus\nSound Design : David KeyGuru\nProduction House : EOP Films`,
   },
   {
     id: 20,
-    title: "Safal Group_MRM_Dumu Zas Tv Commercial",
+    title: "Safal Group",
     videoSrc: "https://player.vimeo.com/video/451462497",
     description: `Safal Group Dumu Zas TV Commercials\nExecutive Producer : EOP Films\nDirector/Dop/Colorist : Enos Olik\nAssistant Director : Kennedy Munene\nProduction Manager : Joseph Mwangi\nProducer : Fuad Mbigi\nAC 1 : Fred Warui\nAC 2 : Ben Kiilu\nDIT/EDIT : Rango\nSound : Nesta Negus\nProduction Design : Fredrick Ochieng\nMake up : Mis Wairimu\nStyling : Kyle Atea\nCasting Agent : Collo\nAgency : Scanad Kenya`,
   },
   {
     id: 21,
-    title: "JIJI - SHOWMAX SERIES",
+    title: "JIJI - SHOWMAX",
     videoSrc: "https://player.vimeo.com/video/996838769",
     description: `Production: @eopfilms\nExecutive Producers: @joseethiongo @enosolik\nDirectors: @enosolik @edwinkamau\nCinematography: @churchilloele @warui_fred @ben_kiilu\nWriters: @dominionsilas @damariswriter\nProducer: @hildah_wellah\nAssistant Producers: @tancy_awuor @vigilance_atieno\nProduction Manager: @sharon_lusambili`,
   },
   {
     id: 22,
-    title: "A wake to Every Moment. TVC",
+    title: "TVC",
     videoSrc: "https://player.vimeo.com/video/883679012",
     description: `Project: Awake to Every Moment. TVC\nClient: @silentnightbedding\nAgency: @leoburnett\nProduction House: @frinantpictures\nDirector/DP: @dir.andere\nAD: @fuadmbigi\nMUA: @zen_up_\nSound: @onyangogrishon\nEditor: @lawrence_odiwa\nColour&grade: @lawrence_odiwa\nArt &Set design: @mr_.elijah\nAssistant Art: @mainaciku\nLighting &Grips: @paulo_ngugi\nAssistant: @k.i.d.u.d.u\nA.C: @warui_fred\nWadrobe: @\nProduction manager: @itsray.em\nProducer: @tancy_awuor`,
   },
