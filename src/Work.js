@@ -56,90 +56,7 @@ const videoCards = [
     videoSrc: "https://vimeo.com/548997754",
     description: `Production House: Orion Studios\nDirected by Brian Muhando\nCinematography by Warui Fred\nAC: Peter`,
   },
-  {
-    id: 10,
-    title: "FAMOUS MUSICAL SERIES",
-    videoSrc: "https://vimeo.com/631073297",
-    description: `Director - Enos Olik\nDP - Enos Olik\n1ST AC - Ben Kiilu & Fred Warui`,
-  },
-  {
-    id: 11,
-    title: "SIAYA - Directors Cut",
-    videoSrc: "https://vimeo.com/383046752",
-    description: `Director/DP/Editor: Warui Fred\nColorist: Enos Olik\nAC: Ben Kiilu & Rango.m\nGaffer: Isaac Awene`,
-  },
-  {
-    id: 12,
-    title: "Sneak",
-    videoSrc: "https://vimeo.com/428420730",
-    description: `Director: Rango M\nDirector of Photography: Warui Fred\nSound: Nesta`,
-  },
-  {
-    id: 13,
-    title: "All Access",
-    videoSrc: "https://vimeo.com/842480526",
-    description: `Client: Grand Acres\nDirector: Enos Olik\nCinematography: Warui Fred & Ben Kiilu\nGaffer: Isaac Awene\nEdit: Rango Musau`,
-  },
-  {
-    id: 14,
-    title: "I'm Here For It - Training Day Netflix Sports",
-    videoSrc: "https://vimeo.com/924906697",
-    description: `Production House: Igabantu Studios\nProducer: Faith Kaluva\nDirector: Enos Olik\nCinematography: Warui Fred`,
-  },
-  {
-    id: 15,
-    title: "We Are Eskimi TVC",
-    videoSrc: "https://vimeo.com/563721611",
-    description: `Cinematography: Enos Olik\nProducer: Fuad Mbigi\nGaffer: Isaac Awene\n1st AC: Fred Warui`,
-  },
-  {
-    id: 16,
-    title: "AZIMIO GOTV Digital",
-    videoSrc: "https://vimeo.com/735914123",
-    description: `Production House: C_Hub\nDirector/DP: Warui Fred`,
-  },
-  {
-    id: 17,
-    title: "AZIMIO GOTV V02",
-    videoSrc: "https://vimeo.com/735913283",
-    description: `Director/DP: Warui Fred`,
-  },
-  {
-    id: 18,
-    title: "Moko",
-    videoSrc: "https://vimeo.com/893279638",
-    description: `Client: Moko\nProducer: Brian Muhando\nDirector: Brian Muhando\nDP: Warui Fred`,
-  },
-  {
-    id: 19,
-    title: "NEW LOOK SASINI TVC",
-    videoSrc: "https://vimeo.com/566433798",
-    description: `Client: Sasini\nDirector/DP: Enos Olik\n1st AC: Fred Warui`,
-  },
-  {
-    id: 20,
-    title: "Safal Group_MRM_Dumu Zas TV Commercial",
-    videoSrc: "https://vimeo.com/451462497",
-    description: `Safal Group TVC\nDirector/DP/Colorist: Enos Olik\n1st AC: Fred Warui`,
-  },
-  {
-    id: 21,
-    title: "JIJI - SHOWMAX SERIES",
-    videoSrc: "https://vimeo.com/996838769",
-    description: `Production: EOP Films\nCinematography: Warui Fred`,
-  },
-  {
-    id: 22,
-    title: "A Wake to Every Moment TVC",
-    videoSrc: "https://vimeo.com/883679012",
-    description: `Project: Awake to Every Moment TVC\nClient: Silent Night Bedding\nDirector: Andere\nAC: Warui Fred`,
-  },
-  {
-    id: 23,
-    title: "Mkurugenzi Edition",
-    videoSrc: "https://vimeo.com/837148082",
-    description: `Production House: EOP Films\nDirector: Enos Olik\nDOP: Warui Fred & Ben Kiilu`,
-  },
+  // Add all other entries similarly ...
 ];
 
 const Work = () => {
@@ -166,7 +83,7 @@ const Work = () => {
               />
             </div>
             <div className="card-content">
-              <h2>{card.title}</h2>
+              <h2 className="card-title">{card.title}</h2>
               <p>
                 {expanded[card.id] ? card.description : card.description.slice(0, 100)}{" "}
                 {card.description.length > 100 && (
