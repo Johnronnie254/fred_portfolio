@@ -76,7 +76,7 @@ const Contact = () => {
 
         {/* Vimeo and IMDb Icons */}
         <a
-          href="https://vimeo.com/yourvimeolink"
+          href="https://vimeo.com/waruifred"
           target="_blank"
           rel="noopener noreferrer"
           style={linkStyle}
@@ -84,7 +84,7 @@ const Contact = () => {
           <FaVimeo />
         </a>
         <a
-          href="https://www.imdb.com/name/yourimdbid"
+          href="https://www.imdb.com/name/nm9577816/"
           target="_blank"
           rel="noopener noreferrer"
           style={linkStyle}

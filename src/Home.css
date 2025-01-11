@@ -1,65 +1,67 @@
-/* Home.css */
-body {
+/* Ensure the entire document background is black and text is white */
+html, body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #000;
-  color: white;
+  padding: 0;
+  height: 100%; /* Ensure it takes full height of the viewport */
+  background-color: #000 !important; /* Force black background */
+  color: #fff !important; /* Force white text */
 }
 
-/* Welcome Screen */
-.welcome-screen {
+/* Ensure home-container inherits the styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  color: #fff !important; /* Force white text */
+}
+
+.home-content {
+  padding: 20px;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.welcome-section h1,
+.welcome-section h3 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.centered-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: black;
-}
-
-.welcome-text {
-  text-align: center;
-}
-
-.welcome-text h1, .welcome-text h3 {
-  text-transform: uppercase;
-  color: white;
+  margin: 50px 0;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin: 0;
-  animation: fadeIn 2s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(-20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Home Section with Cinematography Background */
-.home-section {
-  height: 100vh; /* Full height of the viewport */
-  background-image: url('https://i.pinimg.com/736x/a7/42/3d/a7423d8003c86ebe44c57e79b6d90b62.jpg'); /* Replace with your cinematography background image URL */
-  background-size: cover; /* Ensure image covers the entire section */
-  background-position: center; /* Center the background image */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.centered-text h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 10px 0;
   text-transform: uppercase;
-  animation: float 3s infinite alternate;
-  color: white! important;
+  gap: 1rem;
 }
 
-@keyframes float {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+.portfolio-summary {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: #fff !important; /* Force white text */
 }
 
 @media (max-width: 768px) {
-  .centered-text h1 {
-    font-size: 1.4rem;
+  .centered-text {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+
+  .portfolio-summary {
+    font-size: 1rem;
+    padding: 0 10px;
   }
 }

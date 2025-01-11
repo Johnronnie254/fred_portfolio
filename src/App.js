@@ -10,9 +10,11 @@ const App = () => {
   return (
     <Router>
       {/* Navbar will appear on all routes */}
-      <Navbar /> 
+      <Navbar />
       
       <Routes>
+        {/* Default route for root */}
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/work" element={<Work />} />

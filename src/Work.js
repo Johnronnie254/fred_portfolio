@@ -139,37 +139,42 @@ const videoCards = [
     title: "Mkurugenzi Edition",
     videoSrc: "https://player.vimeo.com/video/837148082",
     description: `Production House : @eopfilms\nDirector : @enosolik\nSet Runner : @fuadmbigi\nLine Producer : @shi_be_knowing\nProduction Manager : @joseethiongo\nDOP : @warui_fred and @ben_kiile\nProduction Design : @mr_.elijah\nSet Design : @k.i.d.u.d.u @jamirejame & Isaac Fundi @mr_.elijah\nGaffer : @isaac_awene\nMUA : mis.wairimu\nOn Set Sound Recordist : @onyangogrishon\nEditor : @rangomusau\nPost-Production : @eopfilms`,
-  }
+  },
 ];
 
 const Work = () => {
   const [visibleCount, setVisibleCount] = useState(9);
- 
+  const [expandedCard, setExpandedCard] = useState(null);
+
   const loadMore = () => setVisibleCount((prev) => Math.min(prev + 9, videoCards.length));
   const loadLess = () => setVisibleCount(9);
-
- 
+  const toggleExpand = (id) => {
+    setExpandedCard(expandedCard === id ? null : id);
+  };
 
   return (
     <div className="work-container">
       <h1 className="work-title">My Work</h1>
       <div className="card-container">
         {videoCards.slice(0, visibleCount).map((card) => (
-          <div className="card" key={card.id}>
+          <div
+            className={`card ${expandedCard === card.id ? "expanded" : ""}`}
+            key={card.id}
+          >
             <div className="video-container">
-              <div className="video-embed">
-                <iframe
-                  src={card.videoSrc}
-                  title={card.title}
-                  className="card-video"
-                  allow="autoplay; fullscreen"
-                ></iframe>
-              </div>
+              <iframe
+                src={card.videoSrc}
+                title={card.title}
+                className="card-video"
+                allow="autoplay; fullscreen"
+              ></iframe>
             </div>
             <div className="card-content">
               <h3>{card.title}</h3>
               <p>{card.description}</p>
-              
+              <button className="view-button" onClick={() => toggleExpand(card.id)}>
+                {expandedCard === card.id ? "Close" : "View"}
+              </button>
             </div>
           </div>
         ))}
