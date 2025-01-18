@@ -1,3 +1,4 @@
+/* Container styling */
 .work-container {
   width: 100%;
   min-height: 100vh;
@@ -14,6 +15,7 @@
   margin-bottom: 20px;
 }
 
+/* Grid layout for cards */
 .card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -21,37 +23,57 @@
 }
 
 .card {
-  border: 1px solid white;
+  border: none;
   border-radius: 8px;
   background: #222;
-  padding: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.card.expanded {
-  grid-column: span 3;
-  transform: scale(1.1);
-  z-index: 10;
-  background: #111;
-  position: relative;
+.card:hover {
+  transform: scale(1.05);
+  background: #333;
 }
 
-.card h3 {
-  margin: 10px 0;
+.card-title {
+  text-align: center;
   font-size: 1rem;
+  margin: 10px 0;
+  font-weight: bold;
 }
 
-.view-button {
+/* Video container */
+.video-container {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  background: black;
+}
+
+.card-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Load more/less buttons */
+.load-more,
+.load-less {
+  display: block;
+  margin: 20px auto;
   background: #00f;
   color: white;
   border: none;
-  padding: 8px 12px;
+  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
+  font-size: 1rem;
 }
 
-.view-button:hover {
+.load-more:hover,
+.load-less:hover {
   background: #005;
 }
 
@@ -60,8 +82,12 @@
     grid-template-columns: 1fr;
   }
 
-  .card.expanded {
-    grid-column: span 1;
-    transform: scale(1.05);
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .load-more,
+  .load-less {
+    font-size: 0.9rem;
   }
 }

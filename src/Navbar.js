@@ -12,9 +12,9 @@ const Navbar = () => {
       {/* Navigation Links */}
       <div className={`nav-links ${menuOpen ? "nav-links-active" : ""}`}>
         <Link to="/home">Home </Link>
-        <Link to="/about">About</Link>
+        
         <Link to="/work">Work</Link>
-        <Link to="/contact">Contact</Link>
+        
       </div>
       {/* Hamburger Menu */}
       <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
