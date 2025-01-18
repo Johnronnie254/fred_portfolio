@@ -1,4 +1,9 @@
-/* Circular image holder */
+.home-container {
+  background-color: #ffffff; /* White background */
+  color: #000; /* Black text */
+  padding: 20px;
+}
+
 .profile-image-holder {
   display: flex;
   justify-content: center;
@@ -6,16 +11,15 @@
 }
 
 .profile-image {
-  width: 150px; /* Adjust size as needed */
-  height: 150px; /* Adjust size as needed */
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  background-color: #fff; /* White background */
+  background-color: #000; /* Black circular image */
   background-size: cover;
   background-position: center;
-  border: 5px solid #fff; /* Optional border */
+  border: 5px solid #fff; /* Optional white border */
 }
 
-/* Adjust centered text for smaller screens */
 .centered-text {
   display: flex;
   flex-wrap: wrap;
@@ -26,6 +30,42 @@
   font-weight: bold;
   text-transform: uppercase;
   gap: 1rem;
+}
+
+.service {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.cinematography {
+  background-color: #ff5733; /* Bright orange */
+}
+
+.editing {
+  background-color: #33c1ff; /* Bright blue */
+}
+
+.focus-pooling {
+  background-color: #28a745; /* Bright green */
+}
+
+.directing {
+  background-color: #ffc107; /* Bright yellow */
+}
+
+.separator {
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.portfolio-summary {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
