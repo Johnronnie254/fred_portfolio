@@ -68,6 +68,11 @@
   line-height: 1.5;
 }
 
+/* Carousel Container Adjustment */
+.carousel-container {
+  margin-top: 40px; /* Add space above carousel */
+}
+
 @media (max-width: 768px) {
   .profile-image {
     width: 150px; /* Adjust for smaller screens */
