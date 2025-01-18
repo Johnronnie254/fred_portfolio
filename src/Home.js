@@ -35,6 +35,26 @@ const Home = () => {
         </div>
       </header>
 
+      {/* Services Section */}
+      <section className="services">
+        <div className="service-item">
+          <h2>Cinematography</h2>
+          <p>Mastering visuals that capture the essence of your story.</p>
+        </div>
+        <div className="service-item">
+          <h2>Editing</h2>
+          <p>Turning raw footage into cinematic masterpieces.</p>
+        </div>
+        <div className="service-item">
+          <h2>Focus Pooling</h2>
+          <p>Ensuring every shot is crisp and impactful.</p>
+        </div>
+        <div className="service-item">
+          <h2>Directing</h2>
+          <p>Bringing creative visions to life through expert direction.</p>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about">
         <AboutUs /> {/* Display AboutUs component */}
