@@ -1,91 +1,141 @@
-.home-container {
-  background-color: Black; /* White background */
-  color: #000; /* Black text */
-  padding: 20px;
+/* Base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
 }
 
-.profile-image-holder {
+.landing-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 30px;
   display: flex;
-  justify-content: center;
-  margin: 30px 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
 }
 
-.profile-image {
-  width: 200px; /* Increased size for larger screens */
-  height: 200px; /* Increased size for larger screens */
-  border-radius: 50%;
-  background-color: #000; /* Black circular fallback */
-  background-size: cover; /* Ensure the image fully covers the circle */
-  background-position: center; /* Center the image */
-  border: 5px solid #fff; /* Optional white border for contrast */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
 }
 
-.centered-text {
+.nav-links {
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: gold;
+}
+
+/* Hero Section */
+.hero {
+  height: 70vh;
+  background: url("https://i.pinimg.com/736x/4c/43/3c/4c433c6e6884155ae3f12b7e2a338704.jpg") center/cover no-repeat;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  gap: 1rem;
-}
-
-.service {
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: bold;
-}
-
-.cinematography {
-  background-color: #ff5733; /* Bright orange */
-}
-
-.editing {
-  background-color: #33c1ff; /* Bright blue */
-}
-
-.focus-pooling {
-  background-color: #28a745; /* Bright green */
-}
-
-.directing {
-  background-color: #ffc107; /* Bright yellow */
-}
-
-.separator {
-  color: #000;
-  font-size: 1.5rem;
-}
-
-.portfolio-summary {
   text-align: center;
-  margin-top: 20px;
-  font-size: 1.1rem;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), black);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+  font-size: 1.5rem;
   font-style: italic;
+}
+
+/* Services Section */
+.services {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px 20px;
+  background: #111;
+  text-align: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  width: 22%;
+  padding: 20px;
+  background: #222;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  background-color: #333;
+}
+
+.service-item h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: gold;
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #ccc;
   line-height: 1.5;
 }
 
-/* Carousel Container Adjustment */
-.carousel-container {
-  margin-top: 40px; /* Add space above carousel */
+/* Scroll Indicator */
+.scroll-indicator {
+  text-align: center;
+  margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-  .profile-image {
-    width: 150px; /* Adjust for smaller screens */
-    height: 150px; /* Adjust for smaller screens */
-  }
-
-  .centered-text {
-    font-size: 1rem;
-    gap: 0.5rem;
-  }
-
-  .portfolio-summary {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
+.scroll-indicator span {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #888;
 }
