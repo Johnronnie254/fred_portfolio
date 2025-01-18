@@ -4,7 +4,7 @@
   height: 400px;
   overflow: hidden;
   margin: 20px 0;
-  background-color: #000; /* Black background for contrast */
+  background-color: black; /* Matches home-container to blend seamlessly */
   color: #fff;
   display: flex;
   align-items: center;
