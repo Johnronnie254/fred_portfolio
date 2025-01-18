@@ -31,37 +31,51 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === carouselData.length - 1 ? 0 : prev + 1));
-    }, 4000); // 4 seconds
-    return () => clearInterval(interval); // Cleanup on component unmount
+    }, 4000);
+    return () => clearInterval(interval);
   }, []);
 
-  const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? carouselData.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev === carouselData.length - 1 ? 0 : prev + 1));
+  const handleSlideChange = (index) => {
+    setCurrentSlide(index);
   };
 
   const { title, bio, image } = carouselData[currentSlide];
 
   return (
     <div className="carousel-container">
-      <div className="carousel-slide" style={{ backgroundImage: `url(${image})` }}>
-        {/* Service Info */}
-        <div className="carousel-content">
-          <h2 className="carousel-title">{title}</h2>
-          <p className="carousel-bio">{bio}</p>
+      {carouselData.map((slide, index) => (
+        <div
+          key={index}
+          className={`carousel-slide ${index === currentSlide ? "active" : ""}`}
+          style={{ backgroundImage: `url(${slide.image})` }}
+        >
+          {index === currentSlide && (
+            <div className="carousel-content">
+              <h2 className="carousel-title">{title}</h2>
+              <p className="carousel-bio">{bio}</p>
+            </div>
+          )}
         </div>
-      </div>
+      ))}
 
       {/* Navigation Buttons */}
-      <button className="carousel-button prev" onClick={handlePrev}>
+      <button className="carousel-button prev" onClick={() => handleSlideChange((currentSlide - 1 + carouselData.length) % carouselData.length)}>
         &#10094;
       </button>
-      <button className="carousel-button next" onClick={handleNext}>
+      <button className="carousel-button next" onClick={() => handleSlideChange((currentSlide + 1) % carouselData.length)}>
         &#10095;
       </button>
+
+      {/* Indicators */}
+      <div className="carousel-indicators">
+        {carouselData.map((_, index) => (
+          <div
+            key={index}
+            className={`carousel-indicator ${index === currentSlide ? "active" : ""}`}
+            onClick={() => handleSlideChange(index)}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 };
