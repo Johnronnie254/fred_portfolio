@@ -1,11 +1,11 @@
-/* Base styles */
+/* Basic styles */
 body, html {
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
   background: black;
   color: white;
-  overflow-x: hidden;
+  scroll-behavior: smooth; /* Add smooth scrolling to the entire page */
 }
 
 .landing-container {
@@ -53,7 +53,7 @@ body, html {
 
 /* Hero Section */
 .hero {
-  height: 70vh;
+  height: 100vh; /* Full screen */
   background: url("https://i.pinimg.com/736x/4c/43/3c/4c433c6e6884155ae3f12b7e2a338704.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
@@ -128,6 +128,34 @@ body, html {
   line-height: 1.5;
 }
 
+/* Section Styling */
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.2rem;
+}
+
+/* Specific section colors */
+.about-section {
+  background-color: #222;
+}
+
+.portfolio-section {
+  background-color: #333;
+}
+
+.contact-section {
+  background-color: #444;
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
   text-align: center;
@@ -138,4 +166,78 @@ body, html {
   font-size: 1.2rem;
   font-style: italic;
   color: #888;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjust navbar for smaller screens */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+  }
+
+  /* Adjust the hero content for smaller screens */
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  /* Service card adjustments for smaller screens */
+  .service-item {
+    width: 100%; /* Stack the cards vertically */
+    margin-bottom: 20px; /* Add some space between stacked cards */
+  }
+
+  /* Improve the visibility of the scroll indicator */
+  .scroll-indicator span {
+    font-size: 1rem;
+    color: #bbb;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further adjust the navbar for very small screens */
+  .navbar {
+    padding: 8px 15px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  /* Further reduce the font sizes for the hero */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Service card font size adjustments */
+  .service-item h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-item p {
+    font-size: 0.9rem;
+  }
 }
