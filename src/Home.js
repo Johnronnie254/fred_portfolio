@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll"; // Import Link from react-scroll
 import Work from "./Work"; // Import Work component
 import AboutUs from "./Aboutus"; // Import AboutUs component
 import Contact from "./Contact"; // Import Contact component
-import "./Home.css";
+import "./Home.css"; // Import the updated CSS
 
 const Home = () => {
+  const [navActive, setNavActive] = useState(false); // State for toggling mobile nav
+
+  const toggleNavbar = () => {
+    setNavActive(!navActive); // Toggle the nav visibility
+  };
+
   return (
     <div className="landing-container">
       {/* Navigation Bar */}
       <nav className="navbar">
-        <div className="logo">Fred Warui</div>
-        <ul className="nav-links">
+        <div className={`hamburger ${navActive ? "active" : ""}`} onClick={toggleNavbar}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <ul className={`nav-links ${navActive ? "active" : ""}`}>
           <li>
             <Link to="home" smooth={true} duration={500}>Home</Link> {/* Link to Home */}
           </li>
@@ -74,8 +85,6 @@ const Home = () => {
       <section id="contact">
         <Contact /> {/* Display Contact component */}
       </section>
-
-      
     </div>
   );
 };

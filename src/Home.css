@@ -241,3 +241,106 @@ section p {
     font-size: 0.9rem;
   }
 }
+/* Navbar Style */
+.navbar {
+  position: fixed; /* Keep the navbar fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #121212;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add a shadow for a subtle lift effect */
+}
+
+.navbar .nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Space between links */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .nav-links li {
+  display: inline-block;
+}
+
+.navbar .nav-links li a {
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar .nav-links li a:hover {
+  color: #FFB400; /* Highlight color on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    flex-direction: column; /* Stack links vertically on small screens */
+    align-items: center;
+    background-color: #121212;
+    position: absolute;
+    top: 60px; /* Position navbar below the hero section */
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: none; /* Hidden initially */
+  }
+
+  .navbar.active .nav-links {
+    display: flex; /* Show links when navbar is active */
+  }
+
+  .navbar .nav-links li a {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+}
+
+/* Add Hamburger Menu for Small Screens */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  margin: 5px 0;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Navbar Toggle */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: 8px;
+  }
+
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(45deg);
+    position: relative;
+    top: -8px;
+  }
+}
