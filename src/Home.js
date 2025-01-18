@@ -3,6 +3,7 @@ import "./Home.css"; // Import CSS for Home
 
 import AboutUs from './Aboutus';
 import Contact from "./Contact";
+import IMG from "./Prof.jpg"; // Import the image
 
 const Home = () => {
   return (
@@ -12,7 +13,11 @@ const Home = () => {
         <div className="welcome-section"></div>
 
         <div className="profile-image-holder">
-          <div className="profile-image"></div>
+          {/* Apply the imported image as the background */}
+          <div
+            className="profile-image"
+            style={{ backgroundImage: `url(${IMG})` }}
+          ></div>
         </div>
 
         <div className="centered-text">
