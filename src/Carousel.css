@@ -23,19 +23,12 @@
   flex-direction: column;
 }
 
-.carousel-profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  border: 3px solid #fff;
-  margin-bottom: 20px;
-}
-
 .carousel-content {
   text-align: center;
   padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark transparent background for readability */
+  border-radius: 10px;
+  max-width: 80%;
 }
 
 .carousel-title {
