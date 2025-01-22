@@ -28,10 +28,10 @@ const videoCards = [
 ];
 
 const Work = () => {
-  const [visibleCount, setVisibleCount] = useState(9);
+  const [visibleCount, setVisibleCount] = useState(4);
 
-  const loadMore = () => setVisibleCount((prev) => Math.min(prev + 9, videoCards.length));
-  const loadLess = () => setVisibleCount(9);
+  const loadMore = () => setVisibleCount((prev) => Math.min(prev + 4, videoCards.length));
+  const loadLess = () => setVisibleCount(4);
 
   return (
     <div className="work-container">
@@ -41,7 +41,7 @@ const Work = () => {
           <div className="video-card" key={card.id}>
             <div className="video-card-thumbnail">
               <iframe
-                src={`${card.videoSrc}?autoplay=0&muted=1`}
+                src={`${card.videoSrc}?autoplay=0`}
                 title={card.title}
                 className="video-frame"
                 allow="autoplay; fullscreen"
@@ -58,7 +58,7 @@ const Work = () => {
           Load More
         </button>
       )}
-      {visibleCount > 9 && (
+      {visibleCount > 4 && (
         <button className="load-less" onClick={loadLess}>
           Load Less
         </button>

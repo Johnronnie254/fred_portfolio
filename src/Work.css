@@ -16,25 +16,18 @@
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 0 10px;
+  gap: 0; /* No gap for stacked cards */
+  padding: 0;
 }
 
 /* Video Card */
 .video-card {
   position: relative;
-  border-radius: 10px;
+  border-radius: 0;
   overflow: hidden;
   background-color: #111;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.video-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Thumbnail */
 .video-card-thumbnail {
   position: relative;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
@@ -51,7 +44,6 @@
   border: none;
 }
 
-/* Content */
 .video-card-content {
   padding: 15px;
   text-align: center;
@@ -63,7 +55,7 @@
   color: white;
 }
 
-/* Load More/Less Buttons */
+/* Buttons */
 .load-more,
 .load-less {
   display: block;
@@ -84,12 +76,11 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .video-card-title {
-    font-size: 1rem;
+  .card-container {
+    grid-template-columns: 1fr; /* Single column */
   }
 
-  .load-more,
-  .load-less {
-    font-size: 0.9rem;
+  .video-card-title {
+    font-size: 1rem;
   }
 }
