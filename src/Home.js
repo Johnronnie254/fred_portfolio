@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import Work from "./Work";
-import AboutUs from "./AboutUs";
+import AboutUs from "./Aboutus";
 import Achievement from "./Achievement"; // Import the new Achievement component
 import Contact from "./Contact";
 import "./Home.css";
