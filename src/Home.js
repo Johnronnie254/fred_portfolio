@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll"; // Import Link from react-scroll
-import Work from "./Work"; // Import Work component
-import AboutUs from "./Aboutus"; // Import AboutUs component
-import Contact from "./Contact"; // Import Contact component
-import "./Home.css"; // Import the updated CSS
+import { Link } from "react-scroll";
+import Work from "./Work";
+import AboutUs from "./AboutUs";
+import Achievement from "./Achievement"; // Import the new Achievement component
+import Contact from "./Contact";
+import "./Home.css";
 
 const Home = () => {
-  const [navActive, setNavActive] = useState(false); // State for toggling mobile nav
+  const [navActive, setNavActive] = useState(false);
 
   const toggleNavbar = () => {
-    setNavActive(!navActive); // Toggle the nav visibility
+    setNavActive(!navActive);
   };
 
   return (
@@ -24,22 +25,25 @@ const Home = () => {
 
         <ul className={`nav-links ${navActive ? "active" : ""}`}>
           <li>
-            <Link to="home" smooth={true} duration={500}>Home</Link> {/* Link to Home */}
+            <Link to="home" smooth={true} duration={500}>Home</Link>
           </li>
           <li>
-            <Link to="portfolio" smooth={true} duration={500}>Portfolio</Link> {/* Link to Portfolio */}
+            <Link to="portfolio" smooth={true} duration={500}>Portfolio</Link>
           </li>
           <li>
-            <Link to="about" smooth={true} duration={500}>About</Link> {/* Link to About */}
+            <Link to="about" smooth={true} duration={500}>About</Link>
           </li>
           <li>
-            <Link to="contact" smooth={true} duration={500}>Contact</Link> {/* Link to Contact */}
+            <Link to="achievements" smooth={true} duration={500}>Achievements</Link> {/* New Achievements Link */}
+          </li>
+          <li>
+            <Link to="contact" smooth={true} duration={500}>Contact</Link>
           </li>
         </ul>
       </nav>
 
       {/* Hero Section */}
-      <header className="hero" id="home"> {/* Home section */}
+      <header className="hero" id="home">
         <div className="hero-content">
           <h1>Fred Warui</h1>
           <p>Cinematographer | Editor | Director</p>
@@ -57,7 +61,7 @@ const Home = () => {
           <p>Turning raw footage into cinematic masterpieces.</p>
         </div>
         <div className="service-item">
-          <h2>Focus Pooling</h2>
+          <h2>Focus Pulling</h2>
           <p>Ensuring every shot is crisp and impactful.</p>
         </div>
         <div className="service-item">
@@ -68,22 +72,22 @@ const Home = () => {
 
       {/* About Section */}
       <section id="about">
-        <AboutUs /> {/* Display AboutUs component */}
+        <AboutUs />
+      </section>
+
+      {/* Achievements Section */}
+      <section id="achievements">
+        <Achievement /> {/* Display Achievement component */}
       </section>
 
       {/* Portfolio Section */}
       <section id="portfolio">
-        <Work /> {/* Display Work component */}
+        <Work />
       </section>
-
-      {/* Scroll Indicator */}
-      <div className="scroll-indicator">
-        <span>Explore More ↓</span>
-      </div>
 
       {/* Contact Section */}
       <section id="contact">
-        <Contact /> {/* Display Contact component */}
+        <Contact />
       </section>
     </div>
   );

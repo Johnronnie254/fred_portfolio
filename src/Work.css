@@ -1,55 +1,48 @@
-/* Container styling */
+/* General Container */
 .work-container {
-  width: 100%;
-  min-height: 100vh;
-  margin: 0 auto;
   padding: 40px 20px;
+  background: #000;
   color: white;
-  background: black;
 }
 
 .work-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-/* Grid layout for cards */
+/* Card Grid */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
 }
 
-.card {
-  border: none;
-  border-radius: 8px;
-  background: #222;
+/* Video Card */
+.video-card {
+  position: relative;
+  border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease, background 0.3s ease;
+  background-color: #111;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.video-card:hover {
   transform: scale(1.05);
-  background: #333;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.card-title {
-  text-align: center;
-  font-size: 1rem;
-  margin: 10px 0;
-  font-weight: bold;
-}
-
-/* Video container */
-.video-container {
+/* Thumbnail */
+.video-card-thumbnail {
   position: relative;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  background: black;
+  background: #000;
+  overflow: hidden;
 }
 
-.card-video {
+.video-frame {
   position: absolute;
   top: 0;
   left: 0;
@@ -58,32 +51,41 @@
   border: none;
 }
 
-/* Load more/less buttons */
+/* Content */
+.video-card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.video-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Load More/Less Buttons */
 .load-more,
 .load-less {
   display: block;
   margin: 20px auto;
-  background: #00f;
-  color: white;
-  border: none;
   padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
+  background-color: #007bff;
+  color: white;
   font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .load-more:hover,
 .load-less:hover {
-  background: #005;
+  background-color: #0056b3;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-  .card-container {
-    grid-template-columns: 1fr;
-  }
-
-  .card-title {
-    font-size: 0.9rem;
+  .video-card-title {
+    font-size: 1rem;
   }
 
   .load-more,

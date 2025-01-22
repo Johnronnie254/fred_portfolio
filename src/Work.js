@@ -38,16 +38,18 @@ const Work = () => {
       <h1 className="work-title">My Work</h1>
       <div className="card-container">
         {videoCards.slice(0, visibleCount).map((card) => (
-          <div className="card" key={card.id}>
-            <div className="video-container">
+          <div className="video-card" key={card.id}>
+            <div className="video-card-thumbnail">
               <iframe
-                src={card.videoSrc}
+                src={`${card.videoSrc}?autoplay=0&muted=1`}
                 title={card.title}
-                className="card-video"
+                className="video-frame"
                 allow="autoplay; fullscreen"
               ></iframe>
             </div>
-            <h3 className="card-title">{card.title}</h3>
+            <div className="video-card-content">
+              <h2 className="video-card-title">{card.title}</h2>
+            </div>
           </div>
         ))}
       </div>
